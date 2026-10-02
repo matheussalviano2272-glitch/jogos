@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b1360">
+  <title>Placar Oficial • Feira de Ciências</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="placar">
+  <main class="app">
+
+    <header class="placar-topo">
+      <h1>🏆 PLACAR OFICIAL DA FEIRA DE CIÊNCIAS</h1>
+      <p>Competição de Conhecimentos Gerais</p>
+      <span id="estado" class="pill ativa">🟢 Competição em andamento</span>
+    </header>
+
+    <!-- Os cards trocam de posição automaticamente conforme a pontuação (ranking.js → iniciarPlacar) -->
+    <section id="equipes" class="equipes-grid" aria-label="Pontuação por equipe">
+      <article class="vidro card-equipe equipe-azul" data-equipe="azul">
+        <div class="medalha-pos">🥇</div>
+        <h2 class="nome-equipe">🔵 Equipe Azul</h2>
+        <p class="rotulo-pos">1º lugar</p>
+        <strong class="pontos-grande">0</strong>
+        <p class="rotulo-pontos">pontos</p>
+        <p class="detalhe"></p>
+        <div class="barra-equipe"><i></i></div>
+        <span class="selo-lider">⭐ LÍDER</span>
+      </article>
+
+      <article class="vidro card-equipe equipe-verde" data-equipe="verde">
+        <div class="medalha-pos">🥈</div>
+        <h2 class="nome-equipe">🟢 Equipe Verde</h2>
+        <p class="rotulo-pos">2º lugar</p>
+        <strong class="pontos-grande">0</strong>
+        <p class="rotulo-pontos">pontos</p>
+        <p class="detalhe"></p>
+        <div class="barra-equipe"><i></i></div>
+        <span class="selo-lider">⭐ LÍDER</span>
+      </article>
+
+      <article class="vidro card-equipe equipe-vermelha" data-equipe="vermelha">
+        <div class="medalha-pos">🥉</div>
+        <h2 class="nome-equipe">🔴 Equipe Vermelha</h2>
+        <p class="rotulo-pos">3º lugar</p>
+        <strong class="pontos-grande">0</strong>
+        <p class="rotulo-pontos">pontos</p>
+        <p class="detalhe"></p>
+        <div class="barra-equipe"><i></i></div>
+        <span class="selo-lider">⭐ LÍDER</span>
+      </article>
+    </section>
+
+    <section class="estatisticas" aria-label="Estatísticas da competição">
+      <div class="vidro metrica"><span>Participantes</span><strong id="st-participantes">0</strong></div>
+      <div class="vidro metrica"><span>Perguntas respondidas</span><strong id="st-respondidas">0</strong></div>
+      <div class="vidro metrica"><span>Maior pontuação</span><strong id="st-maior">0</strong></div>
+      <div class="vidro metrica"><span>Tempo médio por partida</span><strong id="st-tempo">0:00</strong></div>
+    </section>
+
+    <section class="vidro placar-baixo" aria-labelledby="titulo-top">
+      <h2 id="titulo-top">⭐ Melhores alunos</h2>
+      <ol id="top-alunos" class="top-alunos"></ol>
+    </section>
+
+    <div class="rodape-placar">
+      <button type="button" class="btn btn-neutro" id="btn-tela-cheia">⛶ Tela cheia</button>
+      <a class="btn btn-neutro" href="index.html">Voltar ao quiz</a>
+    </div>
+  </main>
+
+  <script src="ranking.js"></script>
+</body>
+</html>
